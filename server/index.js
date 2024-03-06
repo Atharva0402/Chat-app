@@ -96,7 +96,7 @@ mongoose.connect(process.env.MONGO_URL, {
 
 const io = new Server(server, { // Create a new instance of Socket.IO server
     cors: {
-        origin: "http://localhost:3000",
+        origin: process.env.ORIGIN,
         credentials: true,
     }
 });
