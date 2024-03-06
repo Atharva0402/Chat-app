@@ -80,7 +80,7 @@ const server = createServer(app); // Create an HTTP server using Express app
 
 mongoose.set('strictQuery', false);
 
-app.use(cors());
+app.use(cors({"https://talkify-app.netlify.app/"}));
 app.use(express.json());
 app.use("/api/auth", userRoutes);
 app.use("/api/messages", messageRoutes);
